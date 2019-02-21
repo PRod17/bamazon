@@ -73,7 +73,7 @@ function queryItems() {
             chosenItem = results[i];
           }
         }
-        console.log(chosenItem);
+        // console.log(chosenItem);
         
         if (chosenItem.stock_quantity >= parseInt(answer.quantity))  {
           // bid was high enough, so update db, let the user know, and start over
@@ -89,7 +89,7 @@ function queryItems() {
             ],
             function(error) {
             //   if (error) throw err;
-              console.log("Purchase made successfully!");
+              console.log("Purchase made successfully! Your total is $"+chosenItem.price * parseInt(answer.quantity));
               start();
             }
           );
